@@ -1,0 +1,252 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: "Arial Black", "Arial Bold", sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .sidenav {
+                width: 250px;
+                position: fixed;
+                z-index: 1;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10px;
+                overflow-x: hidden;
+                padding: 20px;
+                transition: opacity 0.2s ease-out; /* smooth fade */
+                opacity: 1;
+            }
+            .sidenav.hidden {
+                opacity: 0;
+                pointer-events: none; /* unclickable when hidden */
+            }
+            .sidenav a {
+                padding: 6px 8px 6px 16px;
+                text-decoration: none;
+                font-size: 40px;
+                color: #fb4e9f;
+                display: block;
+                line-height: 3;
+            }
+            .sidenav a:hover {
+                color: #38b6ff;
+            }
+            .section {
+                height: 100vh;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 28px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+            }
+            .container {
+                  position: relative;
+                  width: 70%;
+                  max-width: 900px;
+              }
+              .mySlides {
+                  display: none;
+              }
+              .mySlides img {
+                  height: 60vh;
+                  width: 100%;
+                  object-fit: contain;
+                  /*border-radius: 8px;*/
+              }
+              .numbertext {
+                  position: absolute;
+                  top: 10px;
+                  left: 16px;
+                  color: white;
+                  font-size: 16px;
+                  z-index: 1;
+              }
+              .prev, .next {
+                  position: absolute;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  background: rgba(0,0,0,0.4);
+                  color: white;
+                  font-size: 32px;
+                  padding: 12px 16px;
+                  cursor: pointer;
+                  border-radius: 4px;
+                  user-select: none;
+                  text-decoration: none;
+              }
+              .prev { left: -60px; }
+              .next { right: -60px; }
+              .prev:hover, .next:hover {
+                  background: rgba(0,0,0,0.8);
+              }
+            #home {
+                background-image: url('https://i.pinimg.com/736x/70/3c/44/703c44e0031eb9a379e07bad7fcd6c79.jpg');
+            }
+            #aboutme {
+                background-color: #000000;
+                position: relative;
+            }
+            #portfolio1 {
+                background-image: url('https://i.pinimg.com/736x/1f/11/58/1f11581b8bfa3f8b8c6ebf30fc72dc27.jpg');
+            
+            }
+            #portfolio2 {
+              background-color: #000000;
+            }
+            
+            #contact {
+                background-image: url('https://i.pinimg.com/736x/72/37/7f/72377fa5f11f6a02baa16ece1674b4c3.jpg');
+            }
+            @media screen and (max-height: 450px) {
+                .sidenav {padding-top: 15px;}
+                .sidenav a {font-size: 18px;}
+            }
+        </style>
+    </head>
+    <body>
+
+    <div class="sidenav" id="sidenav">
+        <!--<a href="#home">Home</a> -->
+        <a href="#aboutme">About me</a>
+        <a href="#portfolio2">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="section" id="home">
+        
+    </div>
+
+    <div class="section" id="aboutme">
+    <h1 style="
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-family: 'Arial Bold', 'Arial Bold', sans-serif;
+        font-size: 64px;
+        font-weight: bold;
+        margin: 0;
+        color: white;
+    ">... about me</h1>
+    <img src="https://i.pinimg.com/736x/28/e2/5b/28e25bd2ae926b8724700f1bfc9195d6.jpg" style="
+        position: absolute;
+        left: 260px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+    "/>
+    <h2 style="
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        right: 10px;
+        font-family: 'Arial', sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        margin: 10px;
+        color: #ffffff">
+      lorem ipsum dolor. something idk i forgot the rest of the lorem ipsum thing.
+    </h2>
+</div>
+</div>
+
+    <div class="section" id="portfolio1">
+
+    </div>
+    
+    <div class="section" id="portfolio2">
+  
+      <div class="container">
+          <div class="mySlides">
+              <div class="numbertext">1 / 3</div>
+              <img src="https://i.pinimg.com/736x/c5/0a/ed/c50aed0c8004b324dce072dba452b9bf.jpg" style="width:100%">
+          </div>
+          <div class="mySlides">
+              <div class="numbertext">2 / 3</div>
+              <img src="https://i.pinimg.com/736x/3d/3e/a0/3d3ea0d0ce5598bacf6e86c992657412.jpg" style="width:100%">
+          </div>
+          <div class="mySlides">
+              <div class="numbertext">3 / 3</div>
+              <img src="https://i.pinimg.com/736x/ab/83/6f/ab836f605ee1b0ebe34cf4dc11622358.jpg" style="width:100%">
+          </div>
+  
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
+
+    <div class="section" id="contact">
+      <div style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 300px;
+        gap: 20px;
+      ">
+        <a href="https://www.instagram.com/cpt.001015/" target="_blank" style="
+            text-decoration: none;
+            font-size: 30px;
+            color: #fb4e9f;
+            font-family: 'Arial Black', sans-serif;
+        ">Instagram</a>
+
+        <a href="https://www.linkedin.com/in/clorinda-palmer-tucker-2a142331a/" target="_blank" style="
+            text-decoration: none;
+            font-size: 30px;
+            color: #38b6ff;
+            font-family: 'Arial Black', sans-serif;
+        ">LinkedIn</a>
+      </div>
+    </div>
+
+    <script>
+      const sidenav = document.getElementById('sidenav');
+      const homeSection = document.getElementById('home');
+      const edgeThreshold = 80;
+  
+      function updateNav(mouseX = null) {
+          const rect = homeSection.getBoundingClientRect();
+          const nearEdge = mouseX !== null && mouseX <= edgeThreshold;
+          if (nearEdge) {
+              sidenav.style.opacity = 1;
+              sidenav.style.pointerEvents = 'auto';
+          } else {
+              const opacity = Math.max(0, rect.bottom / window.innerHeight);
+              sidenav.style.opacity = opacity;
+              sidenav.style.pointerEvents = opacity > 0.1 ? 'auto' : 'none';
+          }
+      }
+  
+      window.addEventListener('scroll', () => updateNav());
+      document.addEventListener('mousemove', (e) => updateNav(e.clientX));
+  
+      // slideshow
+      let slideIndex = 1;
+      showSlides(slideIndex);
+  
+      function plusSlides(n) {
+          showSlides(slideIndex += n);
+      }
+  
+      function showSlides(n) {
+          const slides = document.getElementsByClassName("mySlides");
+          if (n > slides.length) slideIndex = 1;
+          if (n < 1) slideIndex = slides.length;
+          for (let i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
+    </body>
+</html>
